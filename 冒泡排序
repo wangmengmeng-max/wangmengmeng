@@ -1,0 +1,31 @@
+算法原理：每次对相邻的两个元素进行比较，若前者大于后者则进行交换，如此一趟下来最后一趟的就是最大元素，重复以上的步骤，除了已经确定的元素
+public class 冒泡排序 {
+
+	public static void main(String[] args) {
+		int score[] = {100, 92, 83, 41, 62, 87, 69, 55, 79, 73};
+}
+	public static void bubbleArray(int[] score) {
+		for(int i = 0; i < score.length - 1; i++) {
+			for(int j = 0; j < score.length - i - 1; j++) {
+				if(score[j] > score[j + 1]) {
+					int temp = score[j];
+					score[j] = score[j + 1];
+					score[j + 1] = temp;
+				}
+			}
+		}
+	}
+	
+	public static void printArray(int score[]) {
+		for(int i = 0; i < score.length; i++) {
+			System.out.print(score[i] + " ");
+		}
+		System.out.println();
+	}
+ 
+白盒测试法、测试用例
+语句覆盖 :  1.arr = {4,3,2,1}
+判定覆盖 :  1.arr = {1,2,3,4};  2. arr = {4,3,2,1}
+条件覆盖 :  1.arr = {1,2,3,4};  2. arr = {4,3,2,1}
+路径覆盖 :  1.arr = {1,2,3,4};  2. arr = {4,3,2,1}
+
